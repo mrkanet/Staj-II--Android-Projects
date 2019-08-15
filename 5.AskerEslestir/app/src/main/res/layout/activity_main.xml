@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:context=".ui.MainActivity" android:id="@+id/constraintLayout3"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
+                android:id="@+id/rv_city"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/cityTextEnter" android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp">
+        </androidx.recyclerview.widget.RecyclerView>
+        <Button
+                android:text="ekle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/addCity"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:onClick="cityAdd"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/cityTextEnter"
+                app:layout_constraintBottom_toTopOf="@+id/addCity" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <Button
+                android:text="sil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deleteCity"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:onClick="cityRm"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:context=".ui.MainActivity" android:id="@+id/constraintLayout2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0" app:layout_constraintStart_toEndOf="@+id/constraintLayout3">
+        <androidx.recyclerview.widget.RecyclerView
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
+                android:id="@+id/rv_name"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/nameTextEnter" android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp">
+        </androidx.recyclerview.widget.RecyclerView>
+        <Button
+                android:text="ekle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/addName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:onClick="nameAdd"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/nameTextEnter"
+                app:layout_constraintBottom_toTopOf="@+id/addName" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <Button
+                android:text="sil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deleteName"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:onClick="nameRm"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:context=".ui.MainActivity"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/constraintLayout4"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout2" android:layout_marginStart="8dp">
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"
+                android:id="@+id/rv_matched"
+                app:layout_constraintBottom_toTopOf="@+id/matchIt" android:layout_marginBottom="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.0">
+        </androidx.recyclerview.widget.RecyclerView>
+        <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/matchIt"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
