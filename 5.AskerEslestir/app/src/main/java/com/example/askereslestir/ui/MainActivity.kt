@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.askereslestir.DataSaver
 import com.example.askereslestir.MainBase
 import com.example.askereslestir.R
+import com.example.askereslestir.Randomize
 import com.example.askereslestir.adapter.ListeAdapter
 import com.example.askereslestir.model.ListeModel
 import kotlinx.android.synthetic.main.activity_main.*
@@ -26,6 +27,15 @@ class MainActivity : MainBase() {
         dataSaver = DataSaver(shared)
         printPage(dataSaver.cityTag, rv_city)
         printPage(dataSaver.nameTag, rv_name)
+    }
+
+    fun shakeList(v: View) {
+        val xListe = Randomize(shrPref()).shakeIt()
+        rv_matched.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = ListeAdapter(xListe) {
+            }
+        }
     }
 
     fun cityAdd(v: View) {
@@ -96,6 +106,7 @@ class MainActivity : MainBase() {
     }
 
     fun printPage(type: String, rv: RecyclerView) {
+
         val xListe = DataSaver(shared).bringListe(type)
         rv.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
@@ -116,6 +127,7 @@ class MainActivity : MainBase() {
                 builder.show()
             }
         }
+
     }
 
     private fun retType(text: String): String {
