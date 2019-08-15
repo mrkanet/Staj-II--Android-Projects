@@ -32,7 +32,7 @@ class DataSaver(private val sP: SharedPreferences) : MainBase() {
     }
 
     fun addNext(type: String, next: String) {
-        var size = sP.getInt(type,0)
+        val size = sP.getInt(type,0)
         sP.edit().putString("$type-$size",next).apply()
         sP.edit().putInt(type,size+1).apply()
     }
