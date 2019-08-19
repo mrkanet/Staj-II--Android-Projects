@@ -1,4 +1,4 @@
-package com.example.askereslestir
+package com.example.askereslestir.ui
 
 import android.annotation.SuppressLint
 import android.content.SharedPreferences

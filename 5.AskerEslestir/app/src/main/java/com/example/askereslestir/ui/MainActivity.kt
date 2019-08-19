@@ -4,15 +4,10 @@ import android.app.AlertDialog
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.askereslestir.DataSaver
-import com.example.askereslestir.MainBase
 import com.example.askereslestir.R
-import com.example.askereslestir.Randomize
 import com.example.askereslestir.adapter.ListeAdapter
-import com.example.askereslestir.model.ListeModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : MainBase() {

@@ -1,4 +1,4 @@
-package com.example.askereslestir
+package com.example.askereslestir.ui
 
 import android.content.Context
 import android.content.SharedPreferences
