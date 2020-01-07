@@ -33,7 +33,7 @@ class ResponseAdapter(
         ) {
             itemView.findViewById<TextView>(R.id.row_count).text = position.toString()
             itemView.findViewById<TextView>(R.id.repo_name).text = repo.name
-            //itemView.findViewById<TextView>(R.id.user_name).text = repo.owner
+            itemView.findViewById<TextView>(R.id.user_name).text = repo.owner.login
             itemView.findViewById<TextView>(R.id.repo_language).text = repo.language
             itemView.findViewById<TextView>(R.id.star_count).text = repo.stargazers_count.toString()
             itemView.setOnClickListener {onItemClickListener(repo)}
