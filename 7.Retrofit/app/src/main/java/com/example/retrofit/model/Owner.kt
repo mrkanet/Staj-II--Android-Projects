@@ -1,4 +1,4 @@
-package com.example.retrofit
+package com.example.retrofit.model
 
 data class Owner(
     val login: String, //owner username

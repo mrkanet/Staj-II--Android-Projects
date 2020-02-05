@@ -9,6 +9,8 @@ import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.retrofit.*
+import com.example.retrofit.adapter.ResponseAdapter
+import com.example.retrofit.model.ResponseModel
 import com.example.retrofit.network.ApiService
 import com.example.retrofit.network.RetrofitClient
 import kotlinx.android.synthetic.main.activity_main.*
@@ -43,15 +45,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                             response: Response<ResponseModel>
                         ) {
                             val repos = response.body()
-                            rv_results.adapter = ResponseAdapter(
-                                repos!!
-                            ) {
-                                //onclick
-                                val open = Intent(Intent.ACTION_VIEW)
-                                open.data =
-                                    Uri.parse("https://github.com/${it.owner.login}/${it.name}")
-                                startActivity(open)
-                            }
+                            rv_results.adapter =
+                                ResponseAdapter(
+                                    repos!!
+                                ) {
+                                    //onclick
+                                    val open = Intent(Intent.ACTION_VIEW)
+                                    open.data =
+                                        Uri.parse("https://github.com/${it.owner.login}/${it.name}")
+                                    startActivity(open)
+                                }
                         }
                     })
             } else {
@@ -75,15 +78,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                             response: Response<ResponseModel>
                         ) {
                             val repos = response.body()
-                            rv_results.adapter = ResponseAdapter(
-                                repos!!
-                            ) {
-                                //onclick
-                                val open = Intent(Intent.ACTION_VIEW)
-                                open.data =
-                                    Uri.parse("https://github.com/${it.owner.login}/${it.name}")
-                                startActivity(open)
-                            }
+                            rv_results.adapter =
+                                ResponseAdapter(
+                                    repos!!
+                                ) {
+                                    //onclick
+                                    val open = Intent(Intent.ACTION_VIEW)
+                                    open.data =
+                                        Uri.parse("https://github.com/${it.owner.login}/${it.name}")
+                                    startActivity(open)
+                                }
                         }
                     })
 

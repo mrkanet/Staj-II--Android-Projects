@@ -1,4 +1,4 @@
-package com.example.retrofit
+package com.example.retrofit.adapter
 
 
 import android.view.LayoutInflater
@@ -6,7 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.retrofit.R
-import com.example.retrofit.ResponseModel
+import com.example.retrofit.model.Items
+import com.example.retrofit.model.ResponseModel
 
 class ResponseAdapter(
     val repos: ResponseModel,
