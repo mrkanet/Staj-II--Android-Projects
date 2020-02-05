@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">Retrofit</string>
+    <string-array name="sort_by">
+        <item>Best Match</item>
+        <item>Stars</item>
+        <item>Forks</item>
+        <item>Update Time</item>
+    </string-array>
+    <string-array name="sort_as">
+        <item>Desc</item>
+        <item>Asc</item>
+    </string-array>
+    <string-array name="Language_List">
+        <item>Any</item>
+        <item>Python</item>
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>C#</item>
+        <item>JavaScript</item>
+        <item>PHP</item>
+        <item>Vue</item>
+        <item>R</item>
+        <item>Ruby</item>
+        <item>Assemble</item>
+        <item>TypeScript</item>
+        <item>HTML</item>
+        <item>C++</item>
+        <item>C</item>
+        <item>Jupyter Notebook</item>
+        <item>CSS</item>
+    </string-array>
 </resources>

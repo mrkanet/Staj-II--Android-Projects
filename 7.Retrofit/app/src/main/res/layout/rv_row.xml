@@ -7,23 +7,32 @@
     android:layout_marginLeft="4dp"
     android:layout_marginTop="8dp"
     android:layout_marginRight="4dp"
-    android:alpha="0.5"
-    android:background="#4f4"
+    android:background="@color/colorPrimary"
     android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/row_count"
+        app:layout_constraintEnd_toEndOf="@+id/row_count"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/github_repo" />
 
     <TextView
         android:id="@+id/row_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:text="32."
         android:textColor="#000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/repo_name" />
 
     <TextView
         android:id="@+id/repo_name"
@@ -32,7 +41,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="myCodes"
-        android:textColor="#1932ff"
+        android:textColor="@color/colorAccent"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/row_count"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,7 +53,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="mrkanet"
-        android:textColor="#4af"
+        android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/repo_name"
@@ -60,7 +69,7 @@
         android:inputType="numberDecimal"
         android:text="12000"
         android:textAlignment="center"
-        android:textColor="#f44"
+        android:textColor="#fff"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="Python"
-        android:textColor="#29f"
+        android:textColor="#fff"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/user_name"
         app:layout_constraintTop_toTopOf="@+id/user_name" />
