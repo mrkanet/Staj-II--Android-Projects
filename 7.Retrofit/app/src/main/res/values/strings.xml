@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Retrofit</string>
+    <string name="app_name">SOGithub</string>
     <string-array name="sort_by">
         <item>Best Match</item>
         <item>Stars</item>
